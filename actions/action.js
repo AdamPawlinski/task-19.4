@@ -1,11 +1,11 @@
 import React from 'React';
 import uuid from 'uuid';
 
-const ADD_COMMENT = 'ADD_COMMENT';
-const REMOVE_COMMENT = 'REMOVE_COMMENT';
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const THUMB_UP = 'THUMB_UP';
-const THUMB_DOWN = 'THUMB_DOWN';
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const THUMB_UP = 'THUMB_UP';
+export const THUMB_DOWN = 'THUMB_DOWN';
 
 const addComment = (text, userName) =>
   return {
@@ -26,7 +26,7 @@ const removeComment = id =>
       id
     }
   };
-const boundRemoveComment = (id) =>
+const boundRemoveComment = id =>
 dispatch(removeComment());
 
 const editComment = (text, id) =>
@@ -47,7 +47,7 @@ const thumbUp = id =>
       id
     }
   };
-const boundThumbUp = (id) =>
+const boundThumbUp = id =>
 dispatch(thumbUp());
 
 const thumbDown = id =>
@@ -57,5 +57,5 @@ const thumbDown = id =>
       id
     }
   };
-const boundThumbDown = (id) =>
+const boundThumbDown = id =>
 dispatch(thumbDown());
